@@ -29,3 +29,11 @@
 
   - Editing data values of each field.
   - Adding new fields to exisiting object.
+
+## Project Screenshots
+
+<h3>Main Dashboard Screen with Visualized Data</h3>
+<img src="./public/dash.png" alt="Dashboard Image">
+
+<h3>Individual Warehouse Screen with Details</h3>
+<img src="./public/details.png" alt="Details Image">
