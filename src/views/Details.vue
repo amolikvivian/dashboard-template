@@ -1,23 +1,16 @@
 <template>
-  <div class="details-container">
-    <h1>
-      Wearhouse Details : {{warehouseData.name}}
-      <router-link to="/" class="btn btn-back">Back to Dashboard</router-link>
-      <button class="btn btn-edit" @click="readToggle = !(readToggle)">Edit Access</button>
-    </h1>
-    <div class="container">
+  <div class="details-container d-flex">
+    <div class="header-container">
+      <h1>Wearhouse Details : {{warehouseData.name}}</h1>
+      <div class="btn-container d-flex align-items-center">
+        <addModal />
+        <router-link to="/" class="btn btn-back">Back to Dashboard</router-link>
+      </div>
+    </div>
+    <div class="container d-flex">
       <div class="row mt-2" v-for="(val, header) in warehouseData" :key="val">
         <div class="col-md-4 headers-col">{{header}}</div>
         <div class="col-md-4 values-col">{{val}}</div>
-        <!-- <div class="col-md-4 values-col">
-          <input
-            type="text"
-            name="inputs"
-            :value="val"
-            :readonly="readToggle"
-            :style="readToggle ? 'color: #818181' : '#000000' "
-          />
-        </div>-->
         <div class="col-md-4 text-center edit-col">
           <editModal :value="String(val)" :header="header" />
         </div>
@@ -27,13 +20,13 @@
 </template>
 
 <script>
-import editModal from "@/components/Modal.vue";
+import editModal from "@/components/Edit-Modal.vue";
+import addModal from "@/components/Add-Modal.vue";
 export default {
-  components: { editModal },
+  components: { editModal, addModal },
   data() {
     return {
       warehouseData: [],
-      readToggle: true,
     };
   },
   mounted() {
@@ -46,7 +39,6 @@ export default {
 
 <style scoped>
 .details-container {
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -55,15 +47,17 @@ export default {
 .row {
   width: 100%;
 }
+.btn-container {
+  flex-direction: column;
+}
 .container {
-  margin-top: 1%;
-  display: flex;
+  margin-top: 2%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 2px solid black;
   width: 70%;
-  padding: 2rem;
+  padding: 1.5rem 3rem;
 }
 .headers-col,
 .values-col {
@@ -77,14 +71,15 @@ export default {
 .values-col {
   background-color: #2c3046;
   color: #f3f3f3;
-  /* color: black; */
 }
-h1 {
+.header-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .btn-back {
-  margin-top: 4%;
+  margin-top: 3%;
   color: #fff;
   background-color: #ee3434;
   border: 2px solid #ee3434;

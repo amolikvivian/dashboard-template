@@ -94,17 +94,29 @@ export default createStore({
         alert("Cannot Filter for negative values");
       }
     },
-    //Editing data
+    //Editing Data
     editData(state, payload) {
       let payloadData = payload.payload;
       parseInt(payloadData.id);
       state.data[payloadData.id - 1][payloadData.header] = payloadData.val;
     },
-    //Generalized sort mutation
+    //Adding New Data
+    addData(state, payload) {
+      let payloadData = payload.payload;
+      if (payloadData.val === "" || payloadData.header === "")
+        alert("Cannot add empty fields");
+      else {
+        state.data[payloadData.id - 1][payloadData.header] = payloadData.val;
+        console.log(state.data[payloadData.id - 1]);
+      }
+    },
+
+    //Generalized Sort mutation
     sortData(state, payload) {
-      if (state.warehouses === null)
+      if (state.warehouses === null) {
         state.data.sort((a, b) => (a[payload] > b[payload] ? 1 : -1));
-      else state.warehouses.sort((a, b) => (a[payload] > b[payload] ? 1 : -1));
+      } else
+        state.warehouses.sort((a, b) => (a[payload] > b[payload] ? 1 : -1));
     },
     //Refreshing States
     refreshDashboard(state) {
@@ -124,6 +136,9 @@ export default createStore({
     },
     editData({ commit }, payload) {
       commit("editData", payload);
+    },
+    addData({ commit }, payload) {
+      commit("addData", payload);
     },
     sortData({ commit }, payload) {
       commit("sortData", payload);
