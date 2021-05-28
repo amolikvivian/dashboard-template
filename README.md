@@ -11,7 +11,7 @@
 
 ## Pages
 
-- </b>Home ( / )<b>  
+- <b>Home ( / )</b>  
   
   Displays data populated from local json file `warehouses.json`.
   
