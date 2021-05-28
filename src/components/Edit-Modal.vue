@@ -82,14 +82,12 @@ input:focus {
 }
 .btn-submit {
   background-color: #2c3046;
-
   width: 10rem;
   border: 2px solid #2c3046;
   color: white;
 }
 .btn-submit:hover {
   color: #2c3046;
-
   border: 2px solid #2c3046;
   background-color: white;
 }
@@ -97,7 +95,6 @@ input:focus {
   background-color: #ee3434;
   border: 2px solid #ee3434;
   color: white;
-
   width: 10rem;
 }
 .btn-cancel:hover {

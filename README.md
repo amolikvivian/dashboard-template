@@ -1,4 +1,4 @@
-# dashboard-template
+# VueJS/Bootstrap Dashboard Template
 
 `stockarea.io`
 
@@ -11,19 +11,21 @@
 
 ## Pages
 
-- <b>Home ( / )</b>  
-  
+- <b>Home ( / )</b>
+
   Displays data populated from local json file `warehouses.json`.
-  
+
   Key Features
-    - Searching by Warehouse Name.
-    - Sorting based on Space, Status, City, Type and Cluster.
-    - Filtering based on Space, Cluster and City.
-    
+
+  - Searching by Warehouse Name.
+  - Sorting based on Space, Status, City, Type and Cluster.
+  - Filtering based on Space, Cluster and City.
+
 - <b>Details ( /warehouse-details/:id )</b>
-  
+
   Displays individual data of selected warehouse.
-  
-  Key Features 
+
+  Key Features
+
   - Editing data values of each field.
   - Adding new fields to exisiting object.
