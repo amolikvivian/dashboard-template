@@ -1,14 +1,14 @@
 <template>
   <div class="details-container d-flex">
     <div class="header-container">
-      <h1>Wearhouse Details : {{warehouseData.name}}</h1>
+      <h1>Warehouse Details : {{warehouseData.name}}</h1>
       <div class="btn-container d-flex align-items-center">
         <addModal />
         <router-link to="/" class="btn btn-back">Back to Dashboard</router-link>
       </div>
     </div>
     <div class="container d-flex">
-      <div class="row mt-2" v-for="(val, header) in warehouseData" :key="val">
+      <div class="row mt-3" v-for="(val, header) in warehouseData" :key="val">
         <div class="col-md-4 headers-col">{{header}}</div>
         <div class="col-md-4 values-col">{{val}}</div>
         <div class="col-md-4 text-left edit-col">
@@ -42,7 +42,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 3rem 5rem;
+  padding: 1.5rem 0rem;
 }
 .row {
   width: 100%;
@@ -51,12 +51,12 @@ export default {
   flex-direction: column;
 }
 .container {
-  margin-top: 2%;
+  margin-top: 0%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-bottom: 3px solid black;
-  width: 100%;
+  width: 70%;
   padding: 1.5rem 3rem;
 }
 .headers-col,
@@ -72,6 +72,7 @@ export default {
   background-color: #2c3046;
   color: #f3f3f3;
 }
+
 .header-container {
   display: flex;
   flex-direction: column;
