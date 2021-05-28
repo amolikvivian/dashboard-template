@@ -11,7 +11,7 @@
       <div class="row mt-2" v-for="(val, header) in warehouseData" :key="val">
         <div class="col-md-4 headers-col">{{header}}</div>
         <div class="col-md-4 values-col">{{val}}</div>
-        <div class="col-md-4 text-center edit-col">
+        <div class="col-md-4 text-left edit-col">
           <editModal :value="String(val)" :header="header" />
         </div>
       </div>
@@ -55,8 +55,8 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 2px solid black;
-  width: 70%;
+  border-bottom: 3px solid black;
+  width: 100%;
   padding: 1.5rem 3rem;
 }
 .headers-col,
