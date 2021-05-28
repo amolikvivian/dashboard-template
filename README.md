@@ -36,4 +36,4 @@
 <img src="./public/dash.png" alt="Dashboard Image">
 
 <h3>Individual Warehouse Screen with Details</h3>
-<img src="./public/details.png" alt="Details Image">
+<img src="./public/detail.png" alt="Details Image">
