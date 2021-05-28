@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="btn" @click="isOpen = true">Edit</button>
+    <button class="btn btn-edit" @click="isOpen = true">Edit</button>
     <teleport to="body">
       <div class="modal" v-if="isOpen">
         <div class="content">
@@ -55,7 +55,6 @@ export default {
   background-color: #fff;
   padding: 50px;
   left: 35vw;
-  border-radius: 20px;
   width: 30em;
   border: 3px solid #2c3046;
 }
@@ -79,6 +78,15 @@ input:focus {
 }
 .btn {
   font-weight: 600;
+}
+.btn-edit {
+  color: rgb(10, 71, 10);
+  /* color: #f3f3f3; */
+  border-bottom: 3px solid rgb(10, 71, 10);
+  font-weight: 600;
+  border-radius: 0;
+  margin-left: 3%;
+  width: 5rem;
 }
 .btn-submit {
   background-color: #2c3046;
