@@ -37,3 +37,30 @@
 
 <h3>Individual Warehouse Screen with Details</h3>
 <img src="./public/detail.png" alt="Details Image">
+
+
+## Project Setup
+
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
